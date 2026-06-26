@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Carlos & Jésica</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     PORTADA
+========================== -->
+
+<section class="intro"
+         id="intro">
+
+    <div class="contenido">
+
+        <p class="frase">
+
+            Hay historias que comienzan mucho antes de decir
+
+            <span>"sí, quiero"</span>...
+
+        </p>
+
+        <p class="frase2">
+
+            La nuestra es una de ellas.
+
+        </p>
+
+        <p class="frase3">
+
+            Queremos celebrar este momento con las personas que han formado parte de nuestro camino.
+
+        </p>
+
+        <!-- SOBRE -->
+
+        <div class="sobre-svg" id="abrir">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#e6cfb3"/><stop offset="100%" stop-color="#d8bc99"/>
+</linearGradient>
+<linearGradient id="flap" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#efd8bd"/><stop offset="100%" stop-color="#dcc09b"/>
+</linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.25"/></filter>
+</defs>
+<g filter="url(#shadow)">
+<rect x="150" y="220" width="600" height="330" rx="20" fill="url(#paper)"/>
+<polygon points="150,550 450,330 750,550" fill="#d2b08a"/>
+<polygon points="150,220 450,430 750,220" fill="#cba884"/>
+<g id="solapa"><path d="M150 220 Q450 20 750 220 L450 430 Z" fill="url(#flap)"/></g>
+<g id="carta">
+<rect x="220" y="70" width="460" height="280" rx="18" fill="#fffdf8"/>
+<text x="450" y="165" text-anchor="middle" font-size="74" font-family="Georgia" fill="#8d745f">C&amp;J</text>
+<text x="450" y="225" text-anchor="middle" font-size="34" font-family="Georgia" fill="#8d745f">Carlos &amp; Jésica</text>
+</g>
+<g id="sello">
+<circle cx="450" cy="325" r="52" fill="#b57d46"/>
+<circle cx="450" cy="325" r="44" fill="#c8935b"/>
+<text x="450" y="338" text-anchor="middle" font-size="34" font-family="Georgia" fill="#fffdf8">C&amp;J</text>
+</g>
+</g>
+</svg>
+
+</div>
+
+            <p class="texto-abrir">
+
+                Toca el sello para abrir
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     INVITACIÓN
+========================== -->
+
+<section id="invitacion">
+    <!-- ==========================
+         CABECERA
+    =========================== -->
+
+    <header class="hero">
+
+        <div class="logo-principal">
+
+            <img src="logo-carlos-jesica.png"
+                 alt="Carlos y Jésica">
+
+        </div>
+
+        <p class="fecha-boda">
+
+            Sábado, 5 de junio de 2027
+
+        </p>
+
+    </header>
+
+    <!-- ==========================
+         CUENTA ATRÁS
+    =========================== -->
+
+    <section class="contador">
+
+        <h2>Empieza la cuenta atrás</h2>
+
+        <div id="countdown">
+
+            <div>
+
+                <span id="dias">000</span>
+
+                <small>Días</small>
+
+            </div>
+
+            <div>
+
+                <span id="horas">00</span>
+
+                <small>Horas</small>
+
+            </div>
+
+            <div>
+
+                <span id="minutos">00</span>
+
+                <small>Minutos</small>
+
+            </div>
+
+            <div>
+
+                <span id="segundos">00</span>
+
+                <small>Segundos</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         MENÚ
+    =========================== -->
+
+    <section class="menu-boda">
+    <!-- ==========================
+         TENDERETE
+    =========================== -->
+
+    <button class="menu-btn"
+            onclick="toggleSection('tenderete')">
+
+        🌴 Tenderete
+
+    </button>
+
+    <section id="tenderete"
+             class="accordion-content">
+
+        <div class="card-lugar">
+
+            <img src="lugar.png"
+                 alt="Hotel Taurito Princess">
+
+            <div class="info-lugar">
+
+                <h3>Hotel Taurito Princess</h3>
+
+                <p>Mogán · Gran Canaria</p>
+
+                <a href="https://maps.google.com/?q=Hotel+Taurito+Princess+Gran+Canaria"
+                   target="_blank"
+                   class="btn-mapa">
+
+                    Ver ubicación
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         EL PLAN
+    =========================== -->
+
+    <button class="menu-btn"
+            onclick="toggleSection('plan')">
+
+        🥂 El plan
+
+    </button>
+
+    <section id="plan"
+             class="accordion-content">
+
+        <img src="plan.png"
+             alt="El plan"
+             class="plan-img">
+
+    </section>
+
+    <!-- ==========================
+         UN DETALLITO
+    =========================== -->
+
+    <button class="menu-btn"
+            onclick="toggleSection('regalo')">
+
+        🎁 Un detallito
+
+    </button>
+
+    <section id="regalo"
+             class="accordion-content">
+
+        <div class="detalle-regalo">
+
+            <p>
+
+                Tu compañía es el mejor regalo.
+
+            </p>
+
+            <p style="margin-top:15px;">
+
+                Pero si además quieres tener un detallito:
+
+            </p>
+
+            <div class="datos-regalo">
+
+                <p>
+
+                    <strong>Bizum Carlos</strong><br>
+
+                    619 78 01 27
+
+                </p>
+
+                <p>
+
+                    <strong>Bizum Jésica</strong><br>
+
+                    680 22 42 93
+
+                </p>
+
+                <hr>
+
+                <p>
+
+                    <strong>Número de cuenta</strong><br>
+
+                    ESXX XXXX XXXX XXXX XXXX XXXX
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================
+         ¿TE VIENES?
+    =========================== -->
+
+    <button class="menu-btn"
+            onclick="toggleSection('asistencia')">
+
+        💌 ¿Te vienes?
+
+    </button>
+
+    <section id="asistencia"
+             class="accordion-content">
+
+        <div class="detalle-asistencia">
+
+            <h3>¿Nos acompañas?</h3>
+
+            <p>
+
+                Nos haría muchísima ilusión contar contigo.
+
+            </p>
+
+            <p style="margin-top:15px;">
+
+                Pulsa el botón y confirma tu asistencia.
+
+            </p>
+
+            <p class="fecha-limite">
+
+                Confírmanos antes del
+
+                <strong>1 de abril de 2027 ❤️</strong>
+
+            </p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzZwlUDgdyXofrOintW_vF3Gh9cMuV23Em34KnyWtfy7Y1UQ/viewform?pli=1"
+               target="_blank"
+               class="btn-enviar">
+
+                Confirmar asistencia
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         ERES UN PUNTAL
+    =========================== -->
+
+    <button class="menu-btn"
+            onclick="toggleSection('puntal')">
+
+        ⭐ Eres un puntal
+
+    </button>
+
+    <section id="puntal"
+             class="accordion-content">
+
+        <div class="detalle-puntal">
+
+            <p>
+
+                Gracias por acompañarnos.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Gracias por formar parte de nuestro camino.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Nos vemos el 5 de junio de 2027 ❤️
+
+            </p>
+
+        </div>
+
+    </section>
+
+    </section>
+<!-- ==========================
+     FIN DE LA INVITACIÓN
+========================== -->
+
+</section>
+
+<!-- ==========================
+     SCRIPTS
+========================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

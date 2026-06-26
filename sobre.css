@@ -1,0 +1,72 @@
+/* ===========================
+   SOBRE PREMIUM
+=========================== */
+
+.sobre-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:50px;
+}
+
+.sobre-svg{
+    width:420px;
+    max-width:90vw;
+    cursor:pointer;
+    transition:transform .35s ease;
+    user-select:none;
+}
+
+.sobre-svg:hover{
+    transform:scale(1.03);
+}
+
+/* ===========================
+   ANIMACIONES
+=========================== */
+
+#solapa{
+    transform-origin:450px 220px;
+    transition:transform .8s cubic-bezier(.65,-0.2,.25,1.25);
+}
+
+#carta{
+    transition:transform .9s ease;
+}
+
+#sello{
+    transition:transform .25s ease;
+}
+
+.sobre-abierto #sello{
+    transform:scale(.92);
+}
+
+.sobre-abierto #solapa{
+    transform:rotateX(180deg);
+}
+
+.sobre-abierto #carta{
+    transform:translateY(-170px);
+}
+
+/* ===========================
+   SOMBRAS
+=========================== */
+
+.sobre-svg{
+    filter:drop-shadow(0 18px 35px rgba(0,0,0,.18));
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .sobre-svg{
+        width:330px;
+    }
+
+}
