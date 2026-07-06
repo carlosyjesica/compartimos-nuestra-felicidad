@@ -4,55 +4,83 @@
 // =====================================
 
 const abrir = document.getElementById("abrir");
+
+const seal = document.getElementById("seal");
+
+const sealTop = document.getElementById("sealTop");
+
+const sealBottom = document.getElementById("sealBottom");
+
 const intro = document.getElementById("intro");
 const invitacion = document.getElementById("invitacion");
 
 // =====================================
-// ABRIR SOBRE
+// ABRIR SELLO
 // =====================================
 
-if (abrir) {
+if (seal) {
 
-    abrir.addEventListener("click", abrirInvitacion);
+    seal.addEventListener("click", abrirInvitacion);
 
 }
 
-function abrirInvitacion() {
+function abrirInvitacion(){
 
-    // Evita abrir dos veces
-    if (abrir.classList.contains("sobre-abierto")) return;
+   if (seal.disabled) return;
 
-    // Animación del sobre
-    abrir.classList.add("sobre-abierto");
+seal.disabled = true;
 
-    // Esperamos a que se abra el sobre
-    setTimeout(() => {
+    seal.style.display="none";
 
-        intro.style.opacity = "0";
+    sealTop.style.display="block";
 
-        setTimeout(() => {
+    sealBottom.style.display="block";
 
-            intro.style.display = "none";
+    sealTop.classList.add("break-top");
 
-            invitacion.style.display = "block";
+    sealBottom.classList.add("break-bottom")
+const tarjeta = document.querySelector(".contenido");
 
-            requestAnimationFrame(() => {
+setTimeout(() => {
 
-                invitacion.style.opacity = "1";
-                invitacion.style.transform = "translateY(0)";
+    tarjeta.style.opacity = "0";
+
+    tarjeta.style.transform = "translateY(-10px)";
+
+}, 500);
+
+    setTimeout(()=>{
+
+        intro.style.opacity="0";
+
+        setTimeout(()=>{
+
+            intro.style.display="none";
+
+            invitacion.style.display="block";
+
+            requestAnimationFrame(()=>{
+
+                invitacion.style.opacity="1";
+
+                invitacion.style.transform="translateY(0)";
 
             });
 
             window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+
+                top:0,
+
+                behavior:"smooth"
+
             });
 
-        }, 800);
+        },500);
 
-    }, 1200);
+    },1200);
 
 }
+
 
 // =====================================
 // CUENTA ATRÁS

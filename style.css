@@ -41,6 +41,10 @@ body{
     padding:60px 50px;
     text-align:center;
     box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+transition:
+    opacity .8s ease,
+    transform .8s ease;
 }
 
 .frase{
@@ -68,62 +72,109 @@ body{
     margin:0 auto;
 }
 
-/* =====================================
-   SOBRE
-===================================== */
 
-.sobre-svg{
-    width:320px;
-    margin:50px auto 15px;
+/*======================================
+SELLO
+======================================*/
+
+.seal-container{
+    position:relative;
+    width:260px;
+    height:260px;
+    margin:45px auto 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#seal{
+   
+    border:none;
+    background:none;
     cursor:pointer;
-    transition:.4s;
+    transition:.35s;
+    padding:0;
+
+    animation:breathe 3s ease-in-out infinite;
 }
 
-.sobre-svg:hover{
-    transform:scale(1.03);
-}
-
-.sobre-svg svg{
-    width:100%;
-    height:auto;
+#seal img{
+    width:240px;
     display:block;
 }
 
+#seal:hover{
+    transform:scale(1.08);
+}
+
+.seal-half{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    opacity:0;
+}
+#seal:active{
+
+    transform:scale(.92);
+
+}
+
+.seal-half img{
+    width:240px;
+}
+
 .texto-abrir{
-    margin-top:15px;
-    color:#777;
-    font-size:.95rem;
-    letter-spacing:1px;
+    margin-top:25px;
+    text-align:center;
+    font-size:15px;
+    letter-spacing:.15em;
+    color:#666;
+    animation:fadeText 2s infinite;
 }
 
-/* =====================================
-   ANIMACIÓN SOBRE
-===================================== */
 
-#solapa{
-    transform-origin:450px 220px;
-    transition:transform .9s ease;
+/*======================================
+    ANIMACIONES
+======================================*/
+
+
+.break-top{
+
+    display:block;
+
+    animation:breakTop .6s forwards;
+
 }
 
-#carta{
-    transition:transform .9s ease;
+.break-bottom{
+
+    display:block;
+
+    animation:breakBottom .6s forwards;
+
+
 }
 
-#sello{
-    transition:transform .35s ease;
+@keyframes breakTop{
+    to{
+        opacity:0;
+        transform:
+            translate(-50%,-130%)
+            rotate(-18deg);
+    }
 }
 
-.sobre-abierto #sello{
-    transform:scale(.90);
+@keyframes breakBottom{
+    to{
+        opacity:0;
+        transform:
+            translate(-50%,35%)
+            rotate(18deg);
+    }
 }
 
-.sobre-abierto #solapa{
-    transform:rotateX(180deg);
-}
-
-.sobre-abierto #carta{
-    transform:translateY(-160px);
-}
 
 /* =====================================
    INVITACIÓN
@@ -132,10 +183,12 @@ body{
 #invitacion{
     display:none;
     opacity:0;
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px 80px;
+    transform:translateY(20px);
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
 }
+
 /* =====================================
    HERO
 ===================================== */
@@ -144,9 +197,13 @@ body{
     background:rgba(255,255,255,.88);
     backdrop-filter:blur(15px);
     border-radius:35px;
-    padding:45px 35px;
+    padding:20px 55px;
+
+    max-width:760px;
+    margin:40px auto 45px;
+
     text-align:center;
-    margin-bottom:45px;
+
     box-shadow:0 15px 35px rgba(0,0,0,.10);
 }
 
@@ -325,6 +382,30 @@ body{
 
 }
 
+.detalle-asistencia{
+
+    padding:35px 45px 55px;
+
+}
+
+
+.detalle-asistencia p{
+
+    line-height:1.8;
+    margin-bottom:12px;
+
+}
+
+.detalle-asistencia .btn{
+
+    margin-top:25px;
+
+}
+
+.detalle-asistencia h3{
+    margin-bottom:22px;
+}
+
 .card-lugar img,
 .plan-img{
 
@@ -498,6 +579,27 @@ body{
         border-radius:15px;
     }
 
+@keyframes breathe{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.04);
+    }
+
 }
+
+@keyframes fadeText{
+
+    0%,100%{
+        opacity:.6;
+    }
+
+    50%{
+        opacity:1;
+    }
+
 
 }
