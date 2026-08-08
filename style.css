@@ -963,12 +963,13 @@ SELLO
 
 
 .codigo-descuento strong {
-    display: block !important;
+    display: inline-block !important;
     font-size: 0.9rem !important;
     letter-spacing: 0.5px !important;
     color: #7a3f48 !important;
-    word-break: normal !important;
     white-space: nowrap; !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
 }
 
 
